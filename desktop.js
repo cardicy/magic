@@ -291,9 +291,11 @@ const contactPage =
 document.getElementById("contact-page");
 
 
-contactBtn.onclick=function(){
+contactBtn.onclick = function(){
 
-    chatList.style.display="none";
+    chatList.style.display = "none";
+
+    contactPage.classList.remove("hidden");   // 新增
 
     contactPage.classList.add("active");
 
@@ -306,11 +308,13 @@ contactBtn.onclick=function(){
 };
 
 
-chatBtn.onclick=function(){
+chatBtn.onclick = function(){
 
-    chatList.style.display="block";
+    chatList.style.display = "block";
 
     contactPage.classList.remove("active");
+
+    contactPage.classList.add("hidden");      // 新增
 
     chatFile.classList.add("active");
 
@@ -496,6 +500,8 @@ privateContactBtn.onclick=function(){
 
     privateChatList.style.display="none";
 
+    privateContactPage.classList.remove("hidden"); // 新增
+
     privateContactPage.classList.add("active");
 
     privateContactBtn.classList.add("active");
@@ -512,11 +518,14 @@ privateChatBtn.onclick=function(){
 
     privateContactPage.classList.remove("active");
 
+    privateContactPage.classList.add("hidden"); // 新增
+
     privateChatBtn.classList.add("active");
 
     privateContactBtn.classList.remove("active");
 
 };
+
 //=========================
 // 桌面微信图标
 //=========================
